@@ -1,0 +1,1486 @@
+:root {
+   --light-color: #fff;
+   --main-color: #d1a671;
+   --primary-color: #d47f18;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+   width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--primary-color);
+   border-radius: 25px;
+   box-shadow: 2px 0px 7px var(--main-color) inset;
+}
+
+::-webkit-scrollbar-track {
+   background: var(--mian-color);
+   box-shadow: 2px 0px 7px var(--primary-color) inset;
+}
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   background: #000;
+}
+
+.container {
+   margin: auto;
+}
+
+/*=========================== Small ==========================*/
+
+@media (max-width: 767px) {
+   .container {
+      width: 95%;
+   }
+}
+
+/*=========================== Mediam =========================*/
+
+@media (min-width: 768px) {
+   .container {
+      width: 90%;
+   }
+}
+
+/*=========================== Large ==========================*/
+
+@media (min-width: 992px) {
+   .container {
+      width: 85%;
+   }
+}
+
+/*=========================== X Large ========================*/
+
+@media (min-width: 1140px) {
+   .container {
+      width: 80%;
+   }
+}
+
+.special {
+   width: fit-content;
+   padding: 100px 0 50px;
+   margin: auto;
+   text-align: center;
+   color: #fff;
+}
+
+.special span {
+   color: var(--main-color);
+}
+
+.special h2 {
+   font-size: 36px;
+   text-transform: uppercase;
+}
+
+.special p {
+   font-size: 18px;
+   padding: 10px;
+   text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+   .special {
+      padding: 70px 0 40px;
+   }
+
+   .special h2 {
+      font-size: 30px;
+   }
+
+   .special p {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 425px) {
+   .special {
+      padding: 70px 0 30px;
+   }
+
+   .special h2 {
+      font-size: 26px;
+   }
+
+   .special p {
+      font-size: 14px;
+   }
+}
+
+/* ========================================================== */
+
+/* ====================== Start Header ====================== */
+
+.header {
+   width: 100%;
+   background: #000;
+
+   position: fixed;
+   top: 0;
+   z-index: 700;
+}
+
+.header .container {
+   height: 80px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.header .nav .list {
+   position: relative;
+   display: inline;
+}
+
+/* ======================= Image Logo ======================= */
+
+.header img {
+   width: 70px;
+}
+
+.header .nav .list li {
+   display: inline-block;
+}
+
+.header .list li .link {
+   color: #fff;
+   display: block;
+   padding: 7px 5px;
+   overflow: hidden;
+   position: relative;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+.header .list li .link::after {
+   content: "";
+   width: 100%;
+   height: 3px;
+   background: var(--main-color);
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   transform: translateX(-105%);
+   transition: .4s all;
+}
+
+.header .list li .link:hover,
+.header .list li .link:focus,
+.header .list li .active {
+   color: var(--main-color);
+}
+
+.header .list li .link:hover::after,
+.header .list li .link:focus::after,
+.header .list li .active::after {
+   transform: translateX(0%);
+}
+
+/* ========================================================== */
+
+.hide-list {
+   transform: translateX(240px)
+}
+
+/* ========================================================== */
+
+.header .icon {
+   position: relative;
+   display: flex;
+}
+
+.header .icon i {
+   font-size: 22px;
+   padding: 7px;
+   margin: 0 5px;
+   color: #fff;
+   cursor: pointer;
+   transition: .4s all;
+}
+
+.header .icon i:hover {
+   transform: scale(1.2);
+   color: var(--main-color);
+}
+
+.nav #xmarkList,
+.icon #bars {
+   display: none;
+}
+
+@media (max-width: 768px) {
+   .header .container {
+      height: 60px;
+   }
+
+   .header img {
+      width: 55px;
+   }
+
+   .header .nav .list {
+      width: 165px;
+      background: #191919;
+      transition: .5s all;
+      border-radius: 0 0 0 7px;
+      position: absolute;
+      top: 60px;
+      right: 0;
+   }
+
+   .nav #xmarkList,
+   .icon #bars {
+      display: block;
+   }
+
+   .header .nav .list li {
+      display: block;
+      padding: 7px;
+      cursor: pointer;
+   }
+
+   .icon i {
+      font-size: 20px;
+   }
+
+   .icon #bars {
+      display: block;
+   }
+
+   .header .nav .list #xmarkList {
+      width: 100%;
+      height: 30px;
+      font-size: 24px;
+      text-align: center;
+      background: transparent;
+      border-top: 1px solid #fff;
+      color: #f00;
+      padding-top: 6px;
+      margin: 2.5% auto;
+      cursor: pointer;
+      transition: .4s all;
+   }
+
+   .header .nav .list #xmarkList:hover {
+      transform: scale(1.1);
+   }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+   .header .nav .list {
+      width: 220px;
+   }
+
+   .icon i {
+      font-size: 24px;
+   }
+
+   .header .nav .list #xmarkList {
+      width: 100%;
+   }
+}
+
+.input {
+   width: 30%;
+   height: 33px;
+   display: block;
+   margin: 90px 50px 0 0;
+   transition: .5s;
+   position: fixed;
+   right: 50px;
+   z-index: 100;
+}
+
+input {
+   width: calc(100% - 50px);
+   height: 100%;
+   color: #fff;
+   border: none;
+   outline: none;
+   font-size: 17px;
+   padding-left: 5px;
+   border-radius: 4px 0 0 4px;
+   background: var(--main-color);
+}
+
+.input span {
+   width: 50px;
+   height: calc(100% + .5px);
+   color: #f00;
+   background: var(--main-color);
+   font-size: 25px;
+   padding-top: 3px;
+   text-align: center;
+   cursor: pointer;
+   border-radius: 0 4px 4px 0;
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+.input span #closeinput {
+   transition: .4s all;
+}
+
+.input span #closeinput:hover {
+   transform: scale(1.2);
+}
+
+.hide-search {
+   transform: translateY(-100px)
+}
+
+::placeholder {
+   color: #fff;
+}
+
+/* ========================================================== */
+
+::selection {
+   color: var(--main-color);
+   background: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+   .input {
+      width: 70%;
+      margin: 65px 20px 0 0;
+   }
+}
+
+
+@media (max-width: 425px) {
+   .input {
+      width: calc(80% - 10px);
+      margin: 65px 5px 0;
+   }
+}
+
+.menu-bar {
+   width: 300px;
+   height: 100vh;
+   background: #fff;
+   padding: 7px;
+   transition: .5s;
+   position: fixed;
+   top: 80px;
+   right: 0;
+   z-index: 200;
+}
+
+.menu-bar .card {
+   padding: 0 10px 10px;
+   margin-bottom: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.menu-bar .card div {
+   margin-left: -70px;
+}
+
+.menu-bar .card:not(:last-child) {
+   border-bottom: 1px solid var(--main-color);
+}
+
+.menu-bar .card div h4 {
+   font-size: 14px;
+   text-transform: capitalize;
+}
+
+.menu-bar .card div p {
+   font-size: 12px;
+   font-weight: 700;
+   margin-top: 5px;
+   color: var(--main-color);
+}
+
+.menu-bar .card .fa-xmark {
+   color: red;
+   font-size: 23px;
+   cursor: pointer;
+   transition: .4s all;
+}
+
+.menu-bar .card .fa-xmark:hover {
+   transform: scale(1.3);
+}
+
+.menu-bar .card img {
+   width: 50px;
+}
+
+.menu-bar .btn {
+   width: 90%;
+   font-size: 14px;
+   color: #fff;
+   padding: 7px;
+   margin-left: 5%;
+   margin-bottom: 15px;
+   border: none;
+   transition: .4s all;
+   ;
+   cursor: pointer;
+   border-radius: 3px;
+   background: var(--main-color);
+}
+
+.menu-bar .btn:hover {
+   transform: scale(1.1);
+}
+
+.menu-bar .fa-right-from-bracket {
+   width: 90%;
+   text-align: center;
+   font-size: 24px;
+   color: #fff;
+   padding: 4px;
+   margin-left: 5%;
+   border: none;
+   transition: .4s all;
+   cursor: pointer;
+   border-radius: 3px;
+   background: red;
+}
+
+.menu-bar .fa-right-from-bracket:hover {
+   transform: scale(1.1);
+}
+
+.hide-menu {
+   transform: translateX(300px);
+}
+
+/*==================== Start Section Home ====================*/
+
+.home {
+   background-image: url(../images/home-img.jpeg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 100vh;
+}
+
+.home .text-home {
+   color: #fff;
+   position: absolute;
+   top: 25%;
+}
+
+.home .text-home span {
+   color: var(--main-color);
+}
+
+.home .text-home h2 {
+   width: 530px;
+   opacity: .7;
+   font-size: 55px;
+   line-height: 1.3;
+   text-transform: capitalize;
+}
+
+.home .text-home p {
+   width: 500px;
+   opacity: .7;
+   font-size: 15px;
+   line-height: 1.6;
+   margin: 20px 0 100px;
+   letter-spacing: 1px;
+   text-transform: capitalize;
+}
+
+.home .text-home .btn {
+   width: 150px;
+   height: 35px;
+   color: #fff;
+   cursor: pointer;
+   font-size: 22px;
+   font-weight: 700;
+   border: none;
+   border-radius: 3px;
+   text-transform: capitalize;
+   background: var(--main-color);
+   transition: .4s all;
+   ;
+}
+
+.home .text-home .btn:hover {
+   width: 200px;
+   letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+   .home .text-home h2 {
+      width: 90%;
+      font-size: 45px;
+   }
+
+   .home .text-home p {
+      width: 75%;
+      font-size: 12px;
+      margin: 30px 0 70px;
+   }
+
+   .home .text-home .btn {
+      font-size: 20px;
+      width: 150px;
+      height: 30px;
+   }
+
+   .home .text-home .btn:hover {
+      width: 180px;
+   }
+}
+
+@media (max-width: 425px) {
+   .home .text-home h2 {
+      width: 90%;
+      font-size: 35px;
+      line-height: 1.7;
+   }
+
+   .home .text-home p {
+      width: 75%;
+      font-size: 10px;
+      line-height: 2;
+      margin: 40px 0 100px;
+   }
+
+   .home .text-home .btn {
+      width: 120px;
+      height: 30px;
+   }
+
+   .home .text-home .btn:hover {
+      width: 150px;
+   }
+}
+
+/*===================== End Section Home =====================*/
+
+.about-content {
+   width: 100%;
+   height: 360px;
+   display: flex;
+   background: #191919;
+}
+
+.about-content .image img {
+   width: 507px;
+   height: 360px;
+}
+
+.about-content .text-about {
+   flex: 1;
+   padding: 25px 0 0 25px;
+   color: #fff;
+}
+
+.about-content .text-about h2 {
+   opacity: .7;
+   font-size: 26px;
+   text-transform: capitalize;
+}
+
+.about-content .text-about p {
+   opacity: .7;
+   font-size: 12px;
+   line-height: 1.6;
+   letter-spacing: 1px;
+   margin: 30px 0 50px;
+   text-transform: capitalize;
+}
+
+.about-content .text-about .btn {
+   width: 150px;
+   height: 35px;
+   color: #fff;
+   cursor: pointer;
+   font-size: 22px;
+   font-weight: 700;
+   border: none;
+   border-radius: 3px;
+   text-transform: capitalize;
+   background: var(--main-color);
+   transition: .4s all;
+   ;
+}
+
+.about-content .text-about .btn:hover {
+   width: 200px;
+   letter-spacing: 2px;
+}
+
+@media (max-width: 992px) {
+   .about-content {
+      width: 100%;
+      height: calc(100% - 60px);
+      ;
+      position: relative;
+   }
+
+   .about-content .image {
+      width: 100%;
+   }
+
+   .about-content .image img {
+      width: 100%;
+      height: 100%;
+   }
+
+   .about-content .text-about {
+      width: 100%;
+      color: #fff;
+      position: absolute;
+      top: 20%;
+   }
+
+   .about-content .text-about h2 {
+      font-size: 40px;
+   }
+
+   .about-content .text-about p {
+      font-size: 14px;
+      line-height: 1.6;
+      width: 80%;
+      letter-spacing: 1px;
+      margin: 40px 0 60px;
+   }
+}
+
+@media (max-width: 768px) {
+   .about-content .text-about {
+      top: 50px;
+   }
+
+   .about-content .text-about h2 {
+      font-size: 26px;
+   }
+
+   .about-content .text-about p {
+      font-size: 12px;
+      opacity: .8;
+      margin: 40px 0 60px;
+   }
+
+   .about-content .text-about .btn {
+      width: 120px;
+      height: 30px;
+      font-size: 20px;
+      text-transform: capitalize;
+      transition: .4s all;
+   }
+
+   .about-content .text-about .btn:hover {
+      width: 150px;
+   }
+}
+
+@media (max-width: 600px) {
+   .about-content .text-about {
+      top: 50px;
+   }
+
+   .about-content .text-about h2 {
+      font-size: 22px;
+   }
+
+   .about-content .text-about p {
+      font-size: 10px;
+      margin: 30px 0 50px;
+   }
+
+   .about-content .text-about .btn {
+      width: 100px;
+      height: 25px;
+      font-size: 16px;
+      transition: .4s all;
+   }
+
+   .about-content .text-about .btn:hover {
+      width: 120px;
+   }
+}
+
+@media (max-width: 490px) {
+   .about-content .text-about {
+      top: 20px;
+   }
+
+   .about-content .text-about h2 {
+      font-size: 18px;
+   }
+
+   .about-content .text-about p {
+      font-size: 8px;
+      margin: 20px 0 40px;
+      line-height: 2;
+   }
+
+   .about-content .text-about .btn {
+      width: 70px;
+      height: 20px;
+      font-size: 10px;
+      transition: .4s all;
+   }
+
+   .about-content .text-about .btn:hover {
+      width: 90px;
+   }
+}
+
+@media (max-width: 370px) {
+   .about-content .text-about {
+      top: 20px;
+   }
+
+   .about-content .text-about h2 {
+      font-size: 16px;
+   }
+
+   .about-content .text-about p {
+      font-size: 6px;
+      margin: 20px 0 40px;
+   }
+
+   .about-content .text-about .btn {
+      width: 70px;
+      height: 20px;
+      font-size: 10px;
+      transition: .4s all;
+   }
+
+   .about-content .text-about .btn:hover {
+      width: 90px;
+   }
+}
+
+/*==================== Start Section Menu ====================*/
+
+.menu-content {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 30px;
+   padding: 0 17px;
+}
+
+.menu-content .card {
+   color: #fff;
+   background: #000;
+   display: flex;
+   padding: 35px 0;
+   border-radius: 4px;
+   align-items: center;
+   transition: .4s all;
+   flex-direction: column;
+   box-shadow: 0 0 1px #fff;
+}
+
+.menu-content .card:hover {
+   background: #121212;
+}
+
+.menu-content .card img {
+   width: 80px;
+   margin-bottom: 10px;
+}
+
+.menu-content .card h2 {
+   text-transform: capitalize;
+   margin: 10px 0 5px;
+}
+
+.menu-content .card p {
+   font-weight: 700;
+   margin: 5px 0 10px;
+}
+
+.menu-content .card p span {
+   color: var(--main-color);
+   text-decoration: line-through #fff;
+}
+
+.menu-content .card button {
+   width: 50%;
+   font-size: 18px;
+   font-weight: 700;
+   padding: 7px 0;
+   margin: 15px 0;
+   border: none;
+   border-radius: 4px;
+   background: var(--main-color);
+   text-transform: capitalize;
+   transition: .4s all;
+   cursor: pointer;
+}
+
+.menu-content .card button:hover {
+   transform: scale(1.1);
+   letter-spacing: 1px;
+}
+
+/*================== End Section Menu ========================*/
+
+
+
+/*================== Start Section Products ==================*/
+
+.product-content {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 30px;
+   padding: 0 17px;
+}
+
+.product-content .card {
+   color: #fff;
+   background: #000;
+   border-radius: 4px;
+   padding: 20px 0;
+   display: flex;
+   text-align: center;
+   align-items: center;
+   transition: .4s all;
+   flex-direction: column;
+   box-shadow: 0 0 2px #fff;
+}
+
+.product-content .card .icon i {
+   font-size: 22px;
+   padding: 7px;
+   margin: 10px 5px;
+   cursor: pointer;
+   transition: .4s all;
+   box-shadow: 0 0 2px #fff;
+}
+
+.product-content .card .icon i:hover {
+   color: #000;
+   background: var(--main-color);
+}
+
+.product-content .card img {
+   margin: 10px 0;
+}
+
+.product-content .card .text {
+   margin: 0 0 15px;
+}
+
+.product-content .card .text h2 {
+   text-transform: capitalize;
+   margin: 10px 0 0;
+}
+
+.product-content .card .text i {
+   color: var(--main-color);
+   margin: 10px 0;
+}
+
+.product-content .card .text p {
+   font-size: 18px;
+   font-weight: 700;
+}
+
+.product-content .card .text p span {
+   color: var(--main-color);
+   text-decoration: line-through #fff;
+}
+
+.product-content .card .shopping {
+   width: 50%;
+   height: 34px;
+   color: #000;
+   font-size: 22px;
+   padding: 6px;
+   margin: auto;
+   cursor: pointer;
+   text-align: center;
+   border-radius: 4px;
+   transition: .4s all;
+   background: var(--main-color);
+}
+
+.product-content .card .shopping:hover {
+   transform: scale(1.1);
+}
+
+/*=================== End Section Products ===================*/
+
+/*=================== Start Section Review ===================*/
+.review-content {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 30px;
+   padding: 0 17px;
+}
+
+.review-content .card {
+   color: #fff;
+   background: #000;
+   border-radius: 4px;
+   padding: 20px 0;
+   display: flex;
+   align-items: center;
+   transition: .4s all;
+   flex-direction: column;
+   box-shadow: 0 0 2px #fff;
+}
+
+.review-content .card>i {
+   color: var(--main-color);
+   font-size: 42px;
+   transform: rotate(-10deg);
+}
+
+.review-content .card p {
+   text-align: center;
+   font-size: 15px;
+   line-height: 1.4;
+   padding: 0 10px;
+   margin: 10px 0;
+   opacity: .7;
+}
+
+.review-content .card .text {
+   position: relative;
+   margin-bottom: 20px;
+}
+
+.review-content .card .text img {
+   width: 90px;
+   display: block;
+   margin: auto;
+   border-radius: 50%;
+}
+
+.review-content .card .text h2 {
+   text-transform: capitalize;
+   margin: 10px 0;
+}
+
+.review-content .card .text span {
+   width: 120px;
+   text-align: center;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.review-content .card .text span i {
+   color: var(--main-color);
+}
+
+/*=================== End Section Review =====================*/
+
+
+/*=================== Start Section Contact ==================*/
+
+.contact-content {
+   background: #202020;
+   display: flex;
+   padding-bottom: 5px;
+}
+
+.contact-content .contact-map iframe {
+   border-radius: 7px;
+   margin: 10px;
+}
+
+.contact-content .contact-text {
+   flex: 1;
+}
+
+.contact-content .contact-text h2 {
+   width: 300px;
+   color: #fff;
+   font-size: 36px;
+   text-align: center;
+   text-transform: capitalize;
+   margin: 20px auto;
+}
+
+.contact-content .contact-text form label {
+   width: 80%;
+   height: 45px;
+   display: flex;
+   align-items: center;
+   margin: 25px auto;
+   border-radius: 4px;
+   box-shadow: 0 0 1px #fff;
+}
+
+.contact-content .contact-text form label i {
+   color: #fff;
+   font-size: 20px;
+   padding: 7px;
+   margin: 0 5px;
+}
+
+.contact-content .contact-text form label input {
+   background: transparent;
+   width: calc(100% - 37px);
+}
+
+.contact-content ::placeholder {
+   text-transform: capitalize;
+   opacity: .7;
+}
+
+.contact-content .contact-text form .btn {
+   width: 80%;
+   font-size: 22px;
+   font-weight: 700;
+   border: none;
+   border-radius: 4px;
+   display: block;
+   padding: 7px;
+   margin: 40px auto;
+   cursor: pointer;
+   transition: .4s all;
+   text-transform: capitalize;
+   background: var(--main-color);
+}
+
+.contact-content .contact-text form .btn:hover {
+   transform: scale(1.05);
+}
+
+/*==================== End Section Contact ===================*/
+
+
+@media (min-width: 769px) and (max-width: 992px) {
+   .contact-content {
+      display: block;
+   }
+
+   .contact-content .contact-map iframe {
+      width: 100%;
+   }
+
+   .contact-content .contact-text form label {
+      width: 90%;
+   }
+
+   .contact-content .contact-text form .btn {
+      width: 90%;
+   }
+}
+
+@media (max-width: 768px) {
+   .contact-content {
+      display: block;
+   }
+
+   .contact-content .contact-map iframe {
+      width: 95%;
+      margin-top: 20px;
+      margin-left: 2.5%;
+   }
+
+   .contact-content .contact-text form label {
+      width: 95%;
+   }
+
+   .contact-content .contact-text form .btn {
+      width: 95%;
+   }
+}
+
+@media (max-width: 425px) {
+   .contact-content .contact-text form label {
+      width: 95%;
+   }
+
+   .contact-content .contact-text form .btn {
+      width: 95%;
+   }
+
+   .contact-content .contact-text h2 {
+      width: 250px;
+      font-size: 30px;
+   }
+
+   .contact-content .contact-text form label i {
+      font-size: 18px;
+   }
+
+   .contact-content .contact-text form .btn:hover {
+      transform: scale(1.05);
+   }
+}
+
+
+/*=================== Start Section Blogs ====================*/
+
+.blogs-content {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 30px;
+   padding: 0 17px 50px;
+}
+
+.blogs-content .card {
+   color: #fff;
+   align-items: center;
+   display: flex;
+   transition: .4s all;
+   flex-direction: column;
+   box-shadow: 0 0 1px #fff;
+}
+
+.blogs-content .card .image {
+   width: 100%;
+   overflow: hidden;
+}
+
+.blogs-content .card .image img {
+   width: 100%;
+   transition: .4s all;
+}
+
+.blogs-content .card:hover .image .one {
+   transform: scale(1.3) rotate(-10deg);
+}
+
+.blogs-content .card:hover .image .two {
+   transform: scale(1.3);
+}
+
+.blogs-content .card:hover .image .three {
+   transform: scale(1.3) rotate(10deg);
+}
+
+.blogs-content .card .blogs-text {
+   width: 100%;
+   text-align: start;
+   margin: 15px 15px 15px 50px;
+}
+
+.blogs-content .card .blogs-text h2 {
+   font-size: 20px;
+   text-transform: capitalize;
+}
+
+.blogs-content .card .blogs-text span {
+   color: var(--main-color);
+   display: block;
+   margin: 15px 0;
+}
+
+.blogs-content .card .blogs-text p {
+   width: 95%;
+   opacity: .7;
+   font-size: 15px;
+   line-height: 1.4;
+}
+
+.blogs-content .card .blogs-text button {
+   width: 120px;
+   font-size: 18px;
+   font-weight: 700;
+   border: none;
+   border-radius: 4px;
+   padding: 5px 7px;
+   margin: 15px 0 0;
+   cursor: pointer;
+   transition: .4s all;
+   text-transform: capitalize;
+   background: var(--main-color);
+}
+
+.blogs-content .card .blogs-text button:hover {
+   letter-spacing: 2px;
+   width: 140px;
+}
+
+/*===================== End Section Blogs ====================*/
+
+
+/*===================== Start Footer =========================*/
+
+footer {
+   width: 100%;
+   background: #282828;
+   text-align: center;
+   padding: 30px 0;
+   box-shadow: 0 0 1px #fff;
+}
+
+footer div span i {
+   width: 50px;
+   height: 50px;
+   color: #fff;
+   font-size: 24px;
+   text-align: center;
+   padding-top: 12px;
+   margin: 0 10px;
+   border-radius: 50%;
+   transition: .4s all;
+   background: var(--main-color);
+}
+
+footer div span i:hover {
+   color: var(--main-color);
+   background: #fff;
+   transform: scale(1.1);
+}
+
+footer div span {
+   display: block;
+   margin-bottom: 20px;
+}
+
+footer nav {
+   margin: 30px 0;
+   flex-wrap: wrap;
+}
+
+footer nav ul li {
+   padding: 5px 10px;
+   margin: 0 5px 10px;
+   transition: .4s all;
+   display: inline-block;
+   border-radius: 4px;
+   border: 1px solid #fff;
+}
+
+footer nav ul li:hover {
+   background: var(--main-color);
+}
+
+footer nav ul li a {
+   color: #fff;
+   font-weight: 700;
+   letter-spacing: 1px;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+footer p {
+   font-size: 20px;
+   text-transform: capitalize;
+   color: #fff;
+}
+
+footer p span {
+   color: var(--main-color);
+   font-weight: 700;
+}
+
+/*======================== ENd Footer ========================*/
+
+@media (max-width: 425px) {
+   footer div span i {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      padding-top: 10px;
+   }
+
+   footer nav ul li {
+      padding: 4px 7px;
+      margin: 0 5px 10px;
+      border-radius: 3px;
+   }
+
+   footer nav ul li a {
+      font-size: 12px;
+   }
+
+   footer p {
+      font-size: 14px;
+   }
+}
+
+/*======================== Start Up ==========================*/
+
+#up {
+   width: 40px;
+   height: 40px;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 700;
+   border: none;
+   background: var(--main-color);
+   border-radius: 7px;
+   position: fixed;
+   right: -40px;
+   bottom: 20px;
+   cursor: pointer;
+   transition: .4s all;
+   opacity: .5;
+}
+
+#up:hover {
+   opacity: 1;
+   transform: scale(1.1);
+}
+
+#up.show {
+   right: 40px;
+}
+
+@media (max-width: 425px) {
+   #up {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      border-radius: 25px;
+   }
+}
+
+
+/*========================== End Up ==========================*/
+
+
+/*==================== Start Create Alert ====================*/
+
+.costom-alert .content {
+   width: 400px;
+   height: 200px;
+   margin: auto;
+   padding: 35px 0;
+   background: var(--main-color);
+   border-radius: 15px;
+   text-align: center;
+   display: flex;
+   flex-wrap: wrap;
+   transition: .4s all;
+   align-content: space-between;
+   position: fixed;
+   top: 30%;
+   left: calc(50% - 200px);
+}
+
+.costom-alert .text {
+   width: 70%;
+   margin: auto;
+   padding-bottom: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-bottom: .2px solid var(--light-color);
+}
+
+.costom-alert .text h2 {
+   font-size: 28px;
+   color: var(--light-color);
+   margin: 0 10px;
+}
+
+.costom-alert .text i {
+   font-size: 26px;
+   color: var(--primary-color);
+}
+
+.costom-alert .btn {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.costom-alert .btn button {
+   width: 100px;
+   height: 35px;
+   font-size: 22px;
+   font-weight: 700;
+   padding: 5px 0;
+   margin: 0 10px;
+   border: none;
+   cursor: pointer;
+   transition: .4s all;
+   border-radius: 7px;
+   color: var(--light-color);
+   background: var(--primary-color);
+}
+
+.costom-alert .btn i {
+   font-size: 26px;
+   color: var(--primary-color);
+   margin: 10px;
+}
+
+.costom-alert .btn i:last-of-type {
+   transform: rotateY(180deg);
+}
+
+.hide-alert {
+   transform: translateY(-250%);
+}
+
+@media (max-width: 600px) {
+   .costom-alert .content {
+      width: 350px;
+      height: 180px;
+      padding: 25px 0;
+      border-radius: 10px;
+      left: calc(50% - 175px);
+   }
+
+   .costom-alert .text {
+      width: 100%;
+   }
+
+   .costom-alert .text h2 {
+      font-size: 24px;
+   }
+
+   .costom-alert .text i {
+      font-size: 26px;
+   }
+
+   .costom-alert .btn button {
+      width: 100px;
+      height: 35px;
+      font-size: 22px;
+   }
+}
+
+@media (max-width: 425px) {
+
+   .costom-alert .content {
+      width: 90%;
+      height: 170px;
+      margin: auto;
+      padding: 25px 0;
+      border-radius: 10px;
+      left: calc(50% - 45%);
+   }
+
+   .costom-alert .text {
+      width: 100%;
+   }
+
+   .costom-alert .text h2 {
+      font-size: 22px;
+   }
+
+   .costom-alert .text i {
+      font-size: 24px;
+   }
+
+   .costom-alert .btn button {
+      width: 100px;
+      height: 35px;
+      font-size: 22px;
+   }
+}
+
+/*===================== End Create Alert =====================*/

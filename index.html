@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!------------------- Icon Title ------------------------->
+   <link rel="icon" href="/images/icon.ico">
+   <link rel="shortcut" href="/images/icon.ico">
+   <link rel="apple-touch-icon" href="/images/icon.ico">
+
+   <!-------------------- Title ----------------------------->
+   <title>Coffee_by_Islam Al-Quraishi</title>
+
+   <!-------------------- Font Awesome ---------------------->
+   <link rel="stylesheet" href="css/all.min.css">
+
+   <!-------------------- Style ----------------------------->
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+   <!-------------------- Start Header ---------------------->
+
+   <header class="header">
+      <div class="container">
+         <a href="#home">
+            <img src="images/logo.png" alt="img-logo">
+         </a>
+         <nav class="nav">
+            <ul id="list" class="list hide-list">
+               <li><a onClick="CloseBars()" class="link active" href="#home">home</a></li>
+               <li><a onClick="CloseBars()" class="link" href="#about">about</a></li>
+               <li><a onClick="CloseBars()" class="link" href="#menu">menu</a></li>
+               <li><a onClick="CloseBars()" class="link" href="#product">products</a></li>
+               <li><a onClick="CloseBars()" class="link" href="#review">review</a></li>
+               <li><a onClick="CloseBars()" class="link" href="#contact">contact</a></li>
+               <li><a onClick="CloseBars()" class="link" href="#blogs">blogs</a></li>
+               <i id="xmarkList" class="fa-solid fa-xmark"></i>
+            </ul>
+         </nav>
+         <div class="icon">
+            <i id="search" class="search fa-solid fa-magnifying-glass"></i>
+            <i id="shopping" class="fa-solid fa-cart-shopping"></i>
+            <i id="bars" class="bars fa-solid fa-bars"></i>
+         </div>
+      </div>
+   </header>
+
+   <!-------------------- End Header ------------------------>
+
+   <!-------------------- Start Icon Header ----------------->
+
+   <div id="input" class="hide-search input">
+      <input type="text" placeholder="Search">
+      <span>
+         <i id="closeinput" class="fa-solid fa-xmark"></i>
+      </span>
+   </div>
+
+   <!-------------------- End Icon Header ------------------->
+
+   <!-------------------- Start Menu ------------------------>
+
+   <div id="menu-bar" class="menu-bar hide-menu">
+      <div class="card">
+         <img src="images/cart-item-1.png">
+         <div>
+            <h4>cart item 01</h4>
+            <p>$15.99</p>
+         </div>
+         <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="card">
+         <img src="images/cart-item-2.png">
+         <div>
+            <h4>cart item 02</h4>
+            <p>$15.99</p>
+         </div>
+         <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="card">
+         <img src="images/cart-item-3.png">
+         <div>
+            <h4>cart item 03</h4>
+            <p>$15.99</p>
+         </div>
+         <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="card">
+         <img src="images/cart-item-4.png">
+         <div>
+            <h4>cart item 04</h4>
+            <p>$15.99</p>
+         </div>
+         <i class="fa-solid fa-xmark"></i>
+      </div>
+      <button class="btn">Buy Now</button>
+      <i id="close-menu" class="fa-solid fa-right-from-bracket"></i>
+   </div>
+
+   <!-------------------- End Menu -------------------------->
+
+   <!-------------------- Start Section Home ---------------->
+
+   <section id="home" class="home">
+      <div class="container">
+         <div class="text-home">
+            <h2>fresh <span>caffee</span> in the morning is good</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptate aspernatur perferendis ea
+               illum rerum!</p>
+            <button id="close" class="btn">git it now</button>
+         </div>
+      </div>
+   </section>
+
+   <!-------------------- End Section Home ------------------>
+
+   <!-------------------- Start Section About --------------->
+
+   <section id="about" class="about">
+      <div class="special">
+         <h2><span>about</span> us</h2>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+      <div class="container">
+         <div class="about-content">
+            <div class="image">
+               <img src="images/about-img.jpeg">
+            </div>
+            <div class="text-about">
+               <h2>whit makes our caffee special</h2>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio nisi odit fugit beatae est
+                  accusamus voluptates libero.<br> <br> laboriosam! Vel nobis est laborum.
+                  Natus
+                  doloribus quaerat nisi cupiditate non iste vero, commodi soluta nulla fuga, vel laudantium.</p>
+               <button class="btn">learn more</button>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-------------------- End Section About ----------------->
+
+   <!-------------------- Start Section Menu ---------------->
+
+   <section id="menu" class="menu">
+      <div class="special">
+         <h2><span>our </span>menu</h2>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+      <div class="container">
+         <div class="menu-content">
+            <div class="card">
+               <img src="images/menu-1.png">
+               <h2>tasy and healty</h2>
+               <p>$15.99 <span>$20.99</span></p>
+               <button>add to cart</button>
+            </div>
+            <div class="card">
+               <img src="images/menu-2.png">
+               <h2>tasy and healty</h2>
+               <p>$15.99 <span>$20.99</span></p>
+               <button>add to cart</button>
+            </div>
+            <div class="card">
+               <img src="images/menu-3.png">
+               <h2>tasy and healty</h2>
+               <p>$15.99 <span>$20.99</span></p>
+               <button>add to cart</button>
+            </div>
+            <div class="card">
+               <img src="images/menu-4.png">
+               <h2>tasy and healty</h2>
+               <p>$15.99 <span>$20.99</span></p>
+               <button>add to cart</button>
+            </div>
+            <div class="card">
+               <img src="images/menu-5.png">
+               <h2>tasy and healty</h2>
+               <p>$15.99 <span>$20.99</span></p>
+               <button>add to cart</button>
+            </div>
+            <div class="card">
+               <img src="images/menu-6.png">
+               <h2>tasy and healty</h2>
+               <p>$15.99 <span>$20.99</span></p>
+               <button>add to cart</button>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-------------------- End Section Menu ------------------>
+
+   <!-------------------- Start Section Products ------------>
+
+   <section id="product" class="product">
+      <div class="special">
+         <h2>latest <span>products</span></h2>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+      <div class="container">
+         <div class="product-content">
+            <div class="card">
+               <div class="icon">
+                  <i class="fa-solid fa-heart"></i>
+                  <i class="fa-solid fa-eye"></i>
+               </div>
+               <img src="images/product-1.png">
+               <div class="text">
+                  <h2>fresh caffee</h2>
+                  <span>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star-half-stroke"></i>
+                  </span>
+                  <p>$15.99 <span>$20.99</span></p>
+               </div>
+               <i class="shopping fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="card">
+               <div class="icon">
+                  <i class="fa-solid fa-heart"></i>
+                  <i class="fa-solid fa-eye"></i>
+               </div>
+               <img src="images/product-2.png">
+               <div class="text">
+                  <h2>fresh caffee</h2>
+                  <span>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                  </span>
+                  <p>$15.99 <span>$20.99</span></p>
+               </div>
+               <i class="shopping fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="card">
+               <div class="icon">
+                  <i class="fa-solid fa-heart"></i>
+                  <i class="fa-solid fa-eye"></i>
+               </div>
+               <img src="images/product-3.png">
+               <div class="text">
+                  <h2>fresh caffee</h2>
+                  <span>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star-half-stroke"></i>
+                  </span>
+                  <p>$15.99 <span>$20.99</span></p>
+               </div>
+               <i class="shopping fa-solid fa-cart-shopping"></i>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-------------------- End Section Menu ------------------>
+
+   <!-------------------- Start Section Review -------------->
+
+   <section id="review" class="review">
+      <div class="special">
+         <h2>customer's <span>review</span></h2>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+      <div class="container">
+         <div class="review-content">
+            <div class="card">
+               <i class="fa-solid fa-backward"></i>
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde dolor magnam odit, aliquid
+                  eveniet! Beatae atque laboriosam fugiat minus facilis error voluptate aliquam, ut provident explicabo
+                  consequatur molestias voluptatum!
+               </p>
+               <div class="text">
+                  <img src="images/pic-1.png">
+                  <h2>selma aksel</h2>
+                  <span>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star-half-stroke"></i>
+                  </span>
+               </div>
+            </div>
+            <div class="card">
+               <i class="fa-solid fa-backward"></i>
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde dolor magnam odit, aliquid
+                  eveniet! Beatae atque laboriosam fugiat minus facilis error voluptate aliquam, ut provident explicabo
+                  consequatur molestias voluptatum!
+               </p>
+               <div class="text">
+                  <img src="images/pic-2.png">
+                  <h2>islam al-quraishi</h2>
+                  <span>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star-half-stroke"></i>
+                  </span>
+               </div>
+            </div>
+            <div class="card">
+               <i class="fa-solid fa-backward"></i>
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde dolor magnam odit, aliquid
+                  eveniet! Beatae atque laboriosam fugiat minus facilis error voluptate aliquam, ut provident explicabo
+                  consequatur molestias voluptatum!
+               </p>
+               <div class="text">
+                  <img src="images/pic-3.png">
+                  <h2>ahmed ragap</h2>
+                  <span>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star-half-stroke"></i>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-------------------- End Section Menu ------------------>
+
+
+   <!-------------------- Start Section Contact ------------->
+
+   <section id="contact" class="contact">
+      <div class="special">
+         <h2><span>contact </span> us</h2>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+      <div class="container">
+         <div class="contact-content">
+            <div class="contact-map">
+               <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d878503.3982992666!2d32.28025999735865!3d30.671873031141423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7f044ed84e6db%3A0x6a3238c46e1c2865!2z2KfZhNi02LHZgtmK2Kk!5e0!3m2!1sar!2seg!4v1661679937187!5m2!1sar!2seg"
+                  width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-text">
+               <h2>get in touch</h2>
+               <form>
+                  <label for="name">
+                     <i class="fa-solid fa-user"></i>
+                     <input id="name" type="text" placeholder="name">
+                  </label>
+                  <label for="email">
+                     <i class="fa-solid fa-envelope"></i>
+                     <input id="email" type="email" required placeholder="email">
+                  </label>
+                  <label for="number">
+                     <i class="fa-solid fa-phone-flip"></i>
+                     <input id="number" type="tel" min="0" max="14" placeholder="number">
+                  </label>
+                  <button class="btn">contact now</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-------------------- End Section Contact --------------->
+
+   <!-------------------- Start Section Blogs --------------->
+
+   <section id="blogs" class="blogs">
+      <div class="special">
+         <h2><span>our </span>blogs</h2>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+      <div class="container">
+         <div class="blogs-content">
+            <div class="card">
+               <div class="image">
+                  <img class="one" src="images/blog-1.jpeg">
+               </div>
+               <div class="blogs-text">
+                  <h2>tasty and refreshing caffee</h2>
+                  <span>by admin / 1st may,2020</span>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, eos.</p>
+                  <button>read more</button>
+               </div>
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img class="two" src="images/blog-2.jpeg">
+               </div>
+               <div class="blogs-text">
+                  <h2>tasty and refreshing caffee</h2>
+                  <span>by admin / 1st may,2020</span>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, eos.</p>
+                  <button>read more</button>
+               </div>
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img class="three" src="images/blog-3.jpeg">
+               </div>
+               <div class="blogs-text">
+                  <h2>tasty and refreshing caffee</h2>
+                  <span>by admin / 1st may,2020</span>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, eos.</p>
+                  <button>read more</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-------------------- ENd Section Blogs ----------------->
+
+   <!-------------------- Start Footer ---------------------->
+
+   <footer>
+      <div>
+         <span>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fab fa-youtube"></i>
+            <i class="fa-brands fab fab fa-instagram"></i>
+            <i class="fa-brands fab fab fa-linkedin-in"></i>
+         </span>
+      </div>
+      <nav>
+         <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#menu">menu</a></li>
+            <li><a href="#product">products</a></li>
+            <li><a href="#review">review</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="#blogs">blogs</a></li>
+         </ul>
+      </nav>
+      <p>create by <span>islam al-quraishi</span> | all rights reserved</p>
+   </footer>
+
+   <!-------------------- End Footer ------------------------>
+
+   <!-------------------- Start Up -------------------------->
+
+   <button id="up" class="show">UP</button>
+
+   <!-- End Up -->
+
+
+
+   <!-------------------- Start Create Alert ---------------->
+
+   <div class="costom-alert">
+      <div id="content-alert" class="content hide-alert">
+         <div class="text">
+            <i class="fa-solid fa-heart"></i>
+            <h2>صلي علي سيدنا محمد</h2>
+            <i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="btn">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <button id="btn-alert">طيب</button>
+            <i class="fa-solid fa-thumbs-up"></i>
+         </div>
+      </div>
+   </div>
+
+   <!-------------------- End Create Alert ------------------>
+
+   <!-------------------- JavaScript ------------------------>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>

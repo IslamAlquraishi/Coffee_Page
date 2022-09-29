@@ -59,7 +59,7 @@ setInterval(function () {
 
 // <<================ Start Click Up =======================>>
 
-up.addEventListener("click", function () {
+Up.addEventListener("click", function () {
   window.scrollTo({
     top: 0,
     behavior: "smooth",

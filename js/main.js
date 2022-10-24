@@ -20,27 +20,21 @@ let Up = document.getElementById("up");
 
 //  Alert
 
-let BtnAlert = document.getElementById("btn-alert");
 let ContentAlert = document.getElementById("content-alert");
+let BtnAlert = document.getElementById("btn-alert");
 
 //  Onload Up
-
 onload = function () {
-  //  Onload Up
-
   Up.classList.remove("show");
 
-  //  Onload Alert
-
-  ContentAlert.classList.add("hide-alert");
+  ContentAlert.classList.add("show-alert");
 
   setTimeout(function () {
-    ContentAlert.classList.remove("hide-alert");
+    ContentAlert.classList.remove("show-alert");
   }, 300);
 };
 
 //  Up Click
-
 onscroll = function () {
   this.scrollY >= 1260 ? Up.classList.add("show") : Up.classList.remove("show");
 };
@@ -48,15 +42,15 @@ onscroll = function () {
 //  Click Alert
 
 BtnAlert.addEventListener("click", function () {
-  ContentAlert.classList.add("hide-alert");
+  ContentAlert.classList.add("show-alert");
 });
 
+// Loop Function
 setInterval(function () {
-  ContentAlert.classList.remove("hide-alert");
+  ContentAlert.classList.remove("show-alert");
 }, 38000);
 
 //  Start Click Up
-
 Up.addEventListener("click", function () {
   window.scrollTo({
     top: 0,

@@ -1272,7 +1272,7 @@ footer nav ul li a {
 }
 
 footer p {
-   font-size: 20px;
+   font-size: 16px;
    text-transform: capitalize;
    color: #fff;
 }
@@ -1420,8 +1420,8 @@ footer p span {
    transform: rotateY(180deg);
 }
 
-.hide-alert {
-   transform: translateY(-250%);
+.show-alert {
+   transform: translateY(-500%) !important;
 }
 
 @media (max-width: 600px) {
@@ -1430,8 +1430,7 @@ footer p span {
       height: 180px;
       padding: 25px 0;
       border-radius: 10px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: calc(50% - 40%);
    }
 
    .costom-alert .text {
@@ -1461,8 +1460,7 @@ footer p span {
       margin: auto;
       padding: 25px 0;
       border-radius: 10px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: calc(50% - 40%);
    }
 
    .costom-alert .text {

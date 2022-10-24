@@ -1,4 +1,4 @@
-// <<=============== Open  ================================>>
+//  Open
 
 let search = document.getElementById("search");
 let input = document.getElementById("input");
@@ -8,29 +8,29 @@ let Listbars = document.getElementById("bars");
 let list = document.getElementById("list");
 let Menu = document.getElementById("menu-bar");
 
-// <<=============== Close ================================>>
+//  Close
 
 let CloseList = document.getElementById("xmarkList");
 let CloseInput = document.getElementById("closeinput");
 let CloseMenu = document.getElementById("close-menu");
 
-// <<================ Up ==================================>>
+//  Up
 
 let Up = document.getElementById("up");
 
-// <<================ Alert ===============================>>
+//  Alert
 
 let BtnAlert = document.getElementById("btn-alert");
 let ContentAlert = document.getElementById("content-alert");
 
-// <<================ Onload Up ===========================>>
+//  Onload Up
 
 onload = function () {
-  // <<-------------- Onload Up --------------------------->>
+  //  Onload Up
 
   Up.classList.remove("show");
 
-  // <<-------------- Onload Alert ------------------------>>
+  //  Onload Alert
 
   ContentAlert.classList.add("hide-alert");
 
@@ -39,25 +39,23 @@ onload = function () {
   }, 300);
 };
 
-// <<================ Up Click ============================>>
+//  Up Click
 
 onscroll = function () {
   this.scrollY >= 1260 ? Up.classList.add("show") : Up.classList.remove("show");
 };
 
-// <<================ Click Alert =========================>>
+//  Click Alert
 
 BtnAlert.addEventListener("click", function () {
   ContentAlert.classList.add("hide-alert");
 });
 
-// <<================ Loop Alert ==========================>>
-
 setInterval(function () {
   ContentAlert.classList.remove("hide-alert");
 }, 38000);
 
-// <<================ Start Click Up =======================>>
+//  Start Click Up
 
 Up.addEventListener("click", function () {
   window.scrollTo({
@@ -66,7 +64,7 @@ Up.addEventListener("click", function () {
   });
 });
 
-// <<================ Opening ==============================>>
+//  Opening
 
 search.addEventListener("click", function () {
   input.classList.toggle("hide-search");
@@ -85,7 +83,7 @@ input.addEventListener("keypress", function (event) {
   }
 });
 
-// <<================ Shopping =============================>>
+//  Shopping
 
 Shopping.addEventListener("click", function () {
   Menu.classList.toggle("hide-menu");
@@ -97,7 +95,7 @@ CloseMenu.addEventListener("click", function () {
   Menu.classList.add("hide-menu");
 });
 
-// <<================ Listing ==============================>>
+//  Listing
 
 Listbars.addEventListener("click", function () {
   list.classList.toggle("hide-list");
@@ -105,17 +103,17 @@ Listbars.addEventListener("click", function () {
   input.classList.add("hide-search");
 });
 
-// <<================  Closeing ============================>>
+//   Closeing
 
 CloseList.addEventListener("click", function () {
   list.classList.add("hide-list");
 });
 
-CloseBars.addEventListener("click", function () {
-  list.classList.add("hide-list");
-});
+// CloseBars.addEventListener("click", function () {
+//   list.classList.add("hide-list");
+// });
 
-// <<================  bars Close ==========================>>
+//   bars Close
 
 function CloseBars() {
   list.classList.add("hide-list");

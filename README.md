@@ -12,6 +12,4 @@
 
 #### I love life and enjoy come and join me | don't hesitate :) ,
 
-#### If You Can teach Me New Things, I am available, I will be grateful You,
-
-#### email : eslamalsayed8133@gmail.com ..!?
+#### If You Can teach Me New Things, I am available, I will be grateful You!

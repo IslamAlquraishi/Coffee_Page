@@ -1,5 +1,4 @@
 //  Open
-
 let search = document.getElementById("search");
 let input = document.getElementById("input");
 let Shopping = document.getElementById("shopping");
@@ -9,17 +8,14 @@ let list = document.getElementById("list");
 let Menu = document.getElementById("menu-bar");
 
 //  Close
-
 let CloseList = document.getElementById("xmarkList");
 let CloseInput = document.getElementById("closeinput");
 let CloseMenu = document.getElementById("close-menu");
 
 //  Up
-
 let Up = document.getElementById("up");
 
 //  Alert
-
 let ContentAlert = document.getElementById("content-alert");
 let BtnAlert = document.getElementById("btn-alert");
 
@@ -40,7 +36,6 @@ onscroll = function () {
 };
 
 //  Click Alert
-
 BtnAlert.addEventListener("click", function () {
   ContentAlert.classList.add("show-alert");
 });
@@ -59,7 +54,6 @@ Up.addEventListener("click", function () {
 });
 
 //  Opening
-
 search.addEventListener("click", function () {
   input.classList.toggle("hide-search");
   Menu.classList.add("hide-menu");
@@ -78,7 +72,6 @@ input.addEventListener("keypress", function (event) {
 });
 
 //  Shopping
-
 Shopping.addEventListener("click", function () {
   Menu.classList.toggle("hide-menu");
   input.classList.add("hide-search");
@@ -90,18 +83,24 @@ CloseMenu.addEventListener("click", function () {
 });
 
 //  Listing
-
 Listbars.addEventListener("click", function () {
   list.classList.toggle("hide-list");
   Menu.classList.add("hide-menu");
   input.classList.add("hide-search");
 });
 
+// Close List By Click Anyway
+document.addEventListener("click", (e) => {
+  if (e.target != Listbars) {
+    list.classList.add("hide-list");
+  }
+});
+
 //   Closeing
 
-CloseList.addEventListener("click", function () {
-  list.classList.add("hide-list");
-});
+// CloseList.addEventListener("click", function () {
+//   list.classList.add("hide-list");
+// });
 
 // CloseBars.addEventListener("click", function () {
 //   list.classList.add("hide-list");

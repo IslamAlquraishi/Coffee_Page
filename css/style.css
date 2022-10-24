@@ -128,7 +128,6 @@ body {
 .header {
    width: 100%;
    background: #000;
-
    position: fixed;
    top: 0;
    z-index: 700;
@@ -192,9 +191,11 @@ body {
 
 /* ========================================================== */
 
-.hide-list {
-   transform: translateX(240px)
-}
+/* .hide-list {
+   transition: opacity .1s;
+   opacity: 0;
+   transform: translateY(-500px)
+} */
 
 /* ========================================================== */
 
@@ -252,10 +253,6 @@ body {
       cursor: pointer;
    }
 
-   .header .nav .list li:last-of-type {
-      border-bottom: 1px solid #fff;
-   }
-
    .icon i {
       font-size: 20px;
    }
@@ -278,9 +275,15 @@ body {
    }
 }
 
-@media (min-width: 425px) and (max-width: 768px) {
+@media (min-width: 350px) and (max-width: 768px) {
    .header .nav .list {
-      width: 220px;
+      width: 100%;
+      text-align: center;
+   }
+
+   .hide-list {
+      opacity: 0;
+      transform: translateY(-500px)
    }
 
    .icon i {
